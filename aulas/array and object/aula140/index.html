@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 140 - Mutabilidade</title>
+</head>
+<body>
+    <script>
+        //Mutabilidade
+        const pessoa = {
+            nome: 'Davi Garcia',
+            idade: 20
+        }
+        //iniciando uma conexão entre dois objetos
+        const pessoa2 = pessoa 
+        //se alterar um, altera o outro
+        pessoa.nome = 'Neymar';
+        console.log(pessoa2.nome)
+        pessoa2.nome = 'José'
+        console.log(pessoa.nome)
+    </script>
+</body>
+</html>

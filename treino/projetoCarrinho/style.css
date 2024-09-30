@@ -1,0 +1,147 @@
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nerko+One&display=swap');
+    *{
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    @keyframes animacao {
+        30% {position: absolute; bottom: 30%;}
+        60% {position: absolute; bottom: 60%;}
+        90% {position: absolute; bottom: 90%;}
+    }
+
+    
+
+    body, html {
+        height: 100%;
+    }
+    body{
+        background-color: #f2ccc7;
+        
+    }
+    header {
+        height: 20%;
+        width: 100%;
+    }
+    /*Parte do Header*/
+    .nav-pai {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 30%;
+    }
+    .nav-itens{
+        display: flex;
+
+    }
+    .nav-itens li {
+        margin-right: 25px;
+        list-style-type: none;
+    }
+    .nav-itens button {
+        background:none;
+        border: none;
+    }
+    .nav-logo{
+        height: 100%;
+        width: 70px;        
+    }
+    .nav-logo img{
+        height: 100%;
+    }
+    /*Parte do Body*/
+    #itens {
+        
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .itens-div {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 20px;
+        border: 5px solid #f09b97;
+        border-radius: 10px;
+        justify-content: center;
+    }
+    .itens-div li{
+        font-size: 25px;
+        text-align: center;
+        list-style: none;
+    }
+    .itens-div button {
+        width: 100%;
+        height: 50px;
+        background-color: #f09b97;
+        border: none;
+        font-size: 30px;
+        
+    }
+
+    .itens-div img {
+        height: 250px;
+        width: 100%;
+        background: none;
+    }
+    #carrinho {
+        display: none;
+        width: 80%;
+        height: 100%;
+        background-color: #ddaca6;
+        position: absolute;
+        top: 25%;
+        left: 10%;
+        border-radius: 30px;
+        border: 5px solid #f09b97;
+        
+    }
+    .nav-carrinho {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-carrinho button {
+        background-color: #ff54f4;
+        border: none;
+        border-radius: 100px;
+        
+    }
+    #itens-carrinho {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+            
+    }
+    #itens-carrinho li{
+        color: white;
+        margin-top: 20px;
+        
+    }
+    /* Estilização das notificações */
+.notificacao-div {
+    position: fixed;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    opacity: 0;
+    transition: bottom 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.notificacao-div.ativo {
+    bottom: 20px;
+    opacity: 1;
+}

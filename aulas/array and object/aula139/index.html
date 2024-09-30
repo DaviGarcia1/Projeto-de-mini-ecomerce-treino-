@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 140</title>
+</head>
+<body>
+    <script>
+        //criando objeto
+       const Aluno = {
+        nome: 'Davi Garcia',
+        idade: 20,
+        cpf: 15995409504
+       }
+       console.log(Aluno.nome);
+       console.log(Aluno.idade);
+       console.log(Aluno.cpf);
+       console.log(Aluno);
+
+       //adicionando
+       Aluno.namorada = 'ANA CLARA FERNANDES'
+       Aluno.teste = 'aaaaa'
+       console.log(Aluno.namorada);
+
+       //deletando 
+       delete Aluno.teste;
+       console.log(Aluno.teste);
+
+       //copiando propriedades para outro objeto
+       const adicionais =  {
+         comidaFavorita: 'pizza',
+         passaTempo: 'jogar Pubg',
+       }
+       Object.assign (Aluno, adicionais)
+       console.log(Aluno);
+       console.log(adicionais)
+
+       //Verificando as chaves do objeto
+       console.log(Object.keys(Aluno))
+       console.log(Object.keys(adicionais))
+
+    </script>
+</body>
+</html>

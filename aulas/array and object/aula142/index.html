@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 142 - Método Pop and Push</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .pessoa {
+            background-color: aqua;
+        }
+        .carrinho {
+            background-color: black;
+            color: white;
+            margin: 20px auto;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+
+                    
+        }
+        .carrinho .fechar {
+            margin: 0;
+            display: flex;
+            justify-content: end; 
+        }
+        .carrinho li button {
+            background: none;
+            color: white;
+            border: none;
+            text-decoration: underline;
+        }
+        
+        #button {
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="carrinho()" type="button">Carrinho</button>
+    </div>
+    <div class="pessoa">
+        <p>Davi Garcia</p>  
+        <p>130R$</p>
+        <button type="button" id="button" onclick="adicionarCarrinho(this)">Comprar</button>
+    </div>
+    <div class="pessoa">
+        <p>Daniel</p>
+        <p>100R$</p>
+        <button type="button" id="button" onclick="adicionarCarrinho(this)">Comprar</button>
+    </div>
+    <div id="carrinho" class="carrinho">
+        <div class="fechar">
+        <button type="button" onclick="fecharCarrinho()"><i class="bi bi-x"></i></button>
+        </div>
+        <ul id="itens"></ul>
+        
+    </div>
+    <script>
+        function carrinho(){
+            let carrinho = document.getElementById('carrinho');
+            carrinho.style.display = 'block';
+        }
+        function fecharCarrinho(){
+            let carrinho = document.getElementById('carrinho');
+            carrinho.style.display = 'none';
+        }
+        function adicionarCarrinho(botao){
+            let itensDiv = botao.parentElement 
+            let nome = itensDiv.querySelector('p:nth-child(1)').textContent 
+            let preco = itensDiv.querySelector('p:nth-child(2)').textContent
+
+            let li = document.createElement('li');
+            li.innerHTML = `${nome} - ${preco} <button type="button" onclick="removerDoCarrinho(this)">Remover</button>`
+            let ul = document.getElementById('itens')
+            ul.appendChild(li)
+            
+        }
+        function removerDoCarrinho(remover){
+                let li = remover.parentElement;
+                li.remove()
+            }
+        
+        
+    </script>
+</body>
+</html>
