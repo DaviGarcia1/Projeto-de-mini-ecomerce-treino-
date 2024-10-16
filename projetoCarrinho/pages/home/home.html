@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/projetoCarrinho/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="nav-pai">
             <div class="nav-logo">
-                <img src="/treino/projetoCarrinho/img/logoDG.png" alt="Logo Davi Garcia">
+                <img src="/projetoCarrinho/img/logoDG.png" alt="Logo Davi Garcia">
             </div>
             <ul class="nav-itens">
                 <li><button><i class="bi bi-house-door-fill"><a href="home.html"></a></i></button></li>
-                <li><button><i class="bi bi-person"></i></button></li>
+                <li class="usuario">
+                    <button type="button">
+                        <i class="bi bi-person"></i>
+                    </button>
+                </li>
                 <li><button type='button' onclick="mostrarCarrinho()"><i class="bi bi-bag"></i></button></li>
             </ul>
         </nav>
@@ -35,6 +39,6 @@
             </ul>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="/projetoCarrinho/script.js"></script>
 </body>
 </html>

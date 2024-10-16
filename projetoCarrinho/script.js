@@ -26,39 +26,51 @@ function itensCarrinho(){
     //Criação de Variáveis
     let jogos = ['Fifa 25', 'Call Of Dutty', 'Gta 06', 'FarCry 06', 'One Piece Pirate Warriors'];
     let precos = ['380R$', '300R$', '400R$', '100R$', '50R$'];
-    let imagens = ['/treino/projetoCarrinho/img/fifa25.png', '/treino/projetoCarrinho/img/cod06.jfif', '/treino/projetoCarrinho/img/gta06.jpg', '/treino/projetoCarrinho/img/farcry06.jpg', '/treino/projetoCarrinho/img/opr4.avif']
+    let imagens = ['/projetoCarrinho/img/fifa25.png', '/projetoCarrinho/img/cod06.jfif', '/projetoCarrinho/img/gta06.jpg', '/projetoCarrinho/img/farcry06.jpg', '/projetoCarrinho/img/opr4.avif']
     let paiMain = document.getElementById('itens')
 
     for(let x = 0; x < jogos.length; x++){
         
     //Inserindo elementos nos itens
-        //Criação da Div que recebe os itens
-        let divItens = document.createElement('div')
-        divItens.setAttribute("class", 'itens-div')
-        paiMain.appendChild(divItens);
-        //Criação da div da imagem que vai ficar em cima do nome:
-        let tagImg = document.createElement('img')
-        divItens.appendChild(tagImg)
-        tagImg.setAttribute('src', `${imagens[x]}`)
-        tagImg.setAttribute('alt', jogos[x]);  
-        //Criação dos elementos
-        let ul = document.createElement('ul');
-        let liJogos = document.createElement('li');
-        let liPrecos = document.createElement('li'); 
-        divItens.appendChild(ul)
-        ul.appendChild(liJogos);
-        ul.appendChild(liPrecos);
-        liJogos.textContent = jogos[x];
-        liPrecos.textContent = precos[x];
-        //Criação dos buttons
-        let button = document.createElement('button');
-        button.setAttribute('type', 'button');
-        button.setAttribute('id', 'button')
-        button.setAttribute('onclick', 'adicionarItens(this)')
-        button.textContent = 'Comprar'
-        divItens.appendChild(button)
-        button.style.textAlign = 'center'
+    //Criação da Div que recebe os itens
+    let divItens = document.createElement('div')
+    divItens.setAttribute("class", 'itens-div')
+    paiMain.appendChild(divItens);
+    //Criação da div da imagem que vai ficar em cima do nome:
+    let tagImg = document.createElement('img')
+    divItens.appendChild(tagImg)
+    tagImg.setAttribute('src', `${imagens[x]}`)
+    tagImg.setAttribute('alt', jogos[x]);  
+    //Criação dos elementos
+    let ul = document.createElement('ul');
+    let liJogos = document.createElement('li');
+    let liPrecos = document.createElement('li'); 
+    divItens.appendChild(ul)
+    ul.appendChild(liJogos);
+    ul.appendChild(liPrecos);
+    liJogos.textContent = jogos[x];
+    liPrecos.textContent = precos[x];
+    //Criação dos buttons
+    let button = document.createElement('button');
+    button.setAttribute('type', 'button');
+    button.setAttribute('id', 'button')
+    button.setAttribute('onclick', 'adicionarItens(this)')
+    button.textContent = 'Comprar'
+    divItens.appendChild(button)
+    button.style.textAlign = 'center'
         
+    //Função para adicionar os itens no carrinho
+    function adicionarItens(botao) {
+        let divEscolhida = botao.parentElement;
+        let nome = divEscolhida.getElementsByTagName('li')[0].textContent;
+        let preco = divEscolhida.getElementsByTagName('li')[1].textContent;
+        let ul = document.querySelector('.itens-div ul');
+        let li = document.createElement('li');
+        li.innerHTML = `${nome} - ${preco} <button type="button" onclick="removerItens(this)"><i class="bi bi-x"></i></button>`
+        ul.appendChild(li);
+        li.style.color = 'black'
+        li.style.textAlign = "left"
+        }
     }
 }
 itensCarrinho()
@@ -92,4 +104,10 @@ function notificacaoCompra() {
 }
 notificacaoCompra()
 
-
+function irParaUsuario(){
+    //Inserindo os elementos nas variáveis:
+    let buttonEnviar = document.querySelector('.nav-itens .usuario button')
+    //Enviando o botão a página usuário:
+    buttonEnviar.addEventListener('click', () => {window.location.href = '/projetoCarrinho/pages/usuario/user.html'})
+}
+irParaUsuario()
