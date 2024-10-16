@@ -156,20 +156,92 @@
 
 /*PÁGINA DO USUÁRIO*/
 
+/*Header*/
 .usuario-header {
     width: 100%;
     height: 155px;
 }
+
+/*Main*/
 .usuario-main {
     width: 100%;
-    height: 766px;
+    height: 366px;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
     justify-content: space-between;
 }
-.usuario-form{
-    
-}
-.usuario-input{
 
+/*Div 1*/
+.usuario-img-Pai {
+    height: 200px;
+    width: 310px;
+    margin-top: 30px;
+    margin-left: 5%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.usuario-img-Pai p {
+    text-align: center;
+}
+.usuario-img-Pai input {
+    position: relative; 
+    top: 50%;
+    left: 10%;
+}
+#usuario-img{
+    height: 100%;
+    width: 100%;
+}
+
+/*Div 2*/
+.usuario-form-Pai{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 200px;
+    flex-direction: row;
+    margin-right: 20%;
+    margin-top: 30px;
+    font-size: 20px;
+}
+.usuario-form-filho1 {
+    display: flex;
+    flex-direction: column;
+}
+.usuario-form-filho1 input{
+    margin-bottom: 20px;
+}
+.usuario-form-filho2 {
+    display: flex;
+    flex-direction: column;
+}
+.usuario-form-filho2 input{
+    margin-bottom: 20px;
+}
+.usuario-form label {
+    display: block;
+}
+
+
+/*Footer*/
+.usuario-footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.usuario-footer-nav{
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+.usuario-footer-ul {
+    display: flex;
+}
+.usuario-footer-li{
+    margin-left: 20px;
+    list-style-type: none;
+    margin-left: 0px;
+}
+.usuario-ul-button {
+    display: flex;
 }

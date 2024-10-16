@@ -11,33 +11,41 @@
         <h1>Meu Perfil</h1>
     </header>
     <main class="usuario-main">
-        <div class="usuario-img">
-            <img src="/projetoCarrinho/img/fifa25.png" alt="fifa25">
+        <div class="usuario-img-Pai">
+            <input type="file" id="usuario-img">
+            <p>Foto de Perfil</p>
         </div>
-        <div class="usuario-form">
-            <label for="name">Nome</label>
-            <input type="text" id="" class="usuario-input">
-            <label for="Email">Email</label>
-            <input type="email" class="usuario-input">
-            <label for="number">Telefone</label>
-            <input type="number" class="usuario-input">
-            <label for="number">Data Nascimento</label>
-            <input type="date" class="usuario-input">
-            <label for="social">Instagram</label>
-            <input type="text" class="usuario-input">
-            <label for="team">Time Favorito</label>
-            <input type="text" class="usuario-input">
+
+
+        <div class="usuario-form-Pai">
+            <div class="usuario-form-filho1">
+                <label for="name">Nome</label>
+                <input type="text" id="" class="usuario-input">
+                <label for="Email">Email</label>
+                <input type="email" class="usuario-input">
+                <label for="number">Telefone</label>
+                <input type="number" class="usuario-input">
+            </div>
+
+            <div class="usuario-form-filho2">
+                <label for="number">Data Nascimento</label>
+                <input type="date" class="usuario-input">
+                <label for="social">Instagram</label>
+                <input type="text" class="usuario-input">
+                <label for="team">Time Favorito</label>
+                <input type="text" class="usuario-input">
+            </div>
         </div>
     </main>
-    <footer>
-        <nav>
-            <ul class="usuario-ul">
-                <li class="usuario-footer-li">Salvar alterações</li>
-                <li class="usuario-footer-li">Ir para o carrinho</li>
-                <li class="usuario-footer-li">Sair</li>
+    <footer class="usuario-footer">
+        <nav class="usuario-footer-nav">
+            <ul class="usuario-footer-ul">
+                <button type="button" class="usuario-ul-button"><li class="usuario-footer-li">Salvar alterações</li></button>
+                <button type="button" class="usuario-ul-button"><li class="usuario-footer-li">Ir para o carrinho</li></button>
+                <button type="button" class="usuario-ul-button"><li class="usuario-footer-li">Voltar</li></button>
             </ul>
         </nav>
     </footer>
-    <script src="/projetoCarrinho/script.js"></script>
+    <script src="/projetoCarrinho/usuario.js"></script>
 </body>
 </html>
